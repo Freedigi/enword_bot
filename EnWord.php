@@ -10,10 +10,8 @@
     $username = $content['message']['chat']['username'];
 
     $curmess = $db->getcurmes($userid);
-        if($text == 'lol'){
-            $request->sendmessage($userid, 'fuck');
-            $db->setcurmes($userid, 1);
-        }
+        
+
         switch ($text){
             case '/start':
                 if(empty($db->getuser($userid))) $db->setuser($userid,$username);
